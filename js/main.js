@@ -4,6 +4,20 @@ const score = document.querySelector('#score')
 const timeLeft = document.querySelector('#timeLeft')
 
 let position;
+let scoreValue = 0
+
+cells.forEach(cell=>{
+    cell.addEventListener('mousedown',()=>{
+
+      if(  cell.id == position){
+          scoreValue++
+          score.innerHTML = scoreValue
+          position = null
+      }
+    })
+})
+
+
 
 function randomlySpawnChris(){
 //enlever toutes les classes chrisRock => plus de chris nulle part
@@ -28,7 +42,7 @@ function randomlySpawnChris(){
 }
 randomlySpawnChris()
 
-setInterval(randomlySpawnChris,400)
+setInterval(randomlySpawnChris,1000)
 
 
 // definir un chiffre au hasard entre 0 et 8 (inclus)
