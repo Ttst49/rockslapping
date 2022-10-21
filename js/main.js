@@ -16,7 +16,7 @@ cells.forEach(cell=>{
       }
     })
 })
-
+//bla bla
 
 
 function randomlySpawnChris(){
