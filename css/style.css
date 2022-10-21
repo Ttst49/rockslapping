@@ -27,3 +27,8 @@ body{
     width: 300px;
     border: solid 5px white;
 }
+.chrisRock{
+    background-image: url("../img/chris.jpg");
+    background-size: cover;
+    background-position: center;
+}
