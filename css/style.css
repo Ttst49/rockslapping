@@ -32,3 +32,13 @@ body{
     background-size: cover;
     background-position: center;
 }
+
+.start{
+    color: white;
+    background-color: orangered;
+    border darkorange 3px solid;
+    border-radius: 4px;
+    font-weight: bolder;
+    font-size: 2em;
+    padding: 6px;
+}

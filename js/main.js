@@ -2,10 +2,16 @@ const cells = document.querySelectorAll('.cell')
 const chris = document.querySelector('.chrisRock')
 const score = document.querySelector('#score')
 const timeLeft = document.querySelector('#timeLeft')
+const startButton = document.querySelector('.start')
+
+startButton.addEventListener('click', start)
+
 
 let position;
 let scoreValue = 0
 let timeLeftValue = null
+let startCountdown = null
+let moveChris = null
 
 cells.forEach(cell=>{
     cell.addEventListener('mousedown',()=>{
@@ -49,17 +55,28 @@ function countdown(){
         clearInterval(moveChris)
         clearInterval(startCountdown)
 
+
         alert(`game over. Score : ${scoreValue}`)
     }
 }
 
+
+
 function start(){
     timeLeftValue = 5
+    scoreValue = 0
+    score.innerHTML = scoreValue
+
+    startCountdown = setInterval(countdown, 1000)
+    moveChris = setInterval(randomlySpawnChris,500)
 }
 
 
-let startCountdown = setInterval(countdown, 1000)
-let moveChris = setInterval(randomlySpawnChris,500)
+
+
+
+
+
 
 
 
